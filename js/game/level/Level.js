@@ -184,7 +184,7 @@ export default class Level {
         this.lockMovement = true
       }
 
-      else if (key === 'ArrowLeft') {
+      else if (key === 'ArrowLeft' || key === 'a') {
         const leftCollider = collider.clone()
         leftCollider.x--
 
@@ -193,7 +193,7 @@ export default class Level {
         }
       }
 
-      else if (key === 'ArrowRight') {
+      else if (key === 'ArrowRight' || key === 'd') {
         const rightCollider = collider.clone()
         rightCollider.x++
 
