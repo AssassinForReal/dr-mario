@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Mario</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+  <div id="app-dialog">Start</div>
+
+  <canvas id="canvas" width="0" height="0"></canvas>
+  <script id="app-script" type="module" src="js/main.js"></script>
+
+  <script nomodule>
+    (function () {
+      var appDialog = document.getElementById('app-dialog')
+      appDialog.setAttribute('style', 'display: block;')
+      appDialog.innerHTML =
+        'Sorry, your browser is not supported by this application!<br>Please update your browser!';
+    })();
+  </script>
+
+  <script>
+    (function () {
+      document.getElementById('app-script').onerror = function () {
+        var appDialog = document.getElementById('app-dialog')
+        appDialog.setAttribute('style', 'display: block;')
+        appDialog.innerHTML = 'Sorry, this application requires a web server to run!';
+      }
+    })();
+  </script>
+</body>
+
+</html>
