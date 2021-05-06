@@ -1,5 +1,5 @@
 import Assets from '../../util/Assets.js'
-import AnimationBloke from '../animation/AnimatiomBloke.js'
+import AnimationBloke from '../animation/AnimationBloke.js'
 import AnimationTextCrawler from '../animation/AnimationTextCrawler.js'
 import EntityTag from '../entity/EntityTag.js'
 import Screen from './Screen.js'
